@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/Text_writing.css">
+    <link rel="stylesheet" href="/static/style_changing_image.css">
+    <link rel="stylesheet" href="/static/Output_of_BusStatus.css">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    
+    
+
+
+
+
+
+
+
+
+
+    <!----------------------------NaveBar---------------------->
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Bus Status</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                 <!--    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                 <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>-->
+                <!--          <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>             -->
+                </ul>
+         <!--      <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>   --> 
+                
+                <a class="nav-link btn  btn-light border-success border-5  btn-outline-success m-1 my-sm-2 rounded" href="{% url 'signup_student:login.html' %}">Login</a>
+                <a href="{% url 'signup_student:signup.html' %}" role="button" target="_blank" class="btn  btn-light  btn-outline-success my-2 my-sm-0 rounded" >Signup</a>
+              </div>
+            </div>
+          </nav>
+   
+
+
+    <!----------------------------ImageChanging Page---------------------->
+
+    <div class="Section_top ">
+      </div>
+<br>
+<!-- ----------------------------  Text Writing.---------------------------------------->
+
+<span class="wrapper">
+  <div class="static-txt">
+  <span class="width-bus">Bus</span>
+  </div>
+  <ul class="dynamic-txts">
+    <li><span>Status</span></li>
+    <li><span>Location</span></li>
+    <li><span>Time</span></li>
+  </ul>
+</span>
+<div class="Everthing">
+  Everthing You Can <br>Search Here...
+
+</div>
+
+<div class="Output_background ">
+<div class="container ">
+
+
+
+    <span class="Bus_status_out container1"name="Location">Location</span>
+    <span class="Bus_status_out container2" name="Time">Time</span> 
+    <span class="Bus_status_out container3" name="Bus_no">Bus_number</span>   
+
+<form action="">
+  <!--
+      <div class="dropdown-center">
+        <select class="btn btn-outline-warning dropdown-toggle left" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Location
+      
+        <ul class="dropdown-menu left">
+          <li><option>Niyawa</option></li>
+          <li><option>Char Khamba</option></li>
+          <li><option>Kargi Chowk</option></li>
+        </ul>
+      </select>
+      </div>
+    -->
+    <div class="col-md-6 move ">
+        
+      <select class="form-select " id="validationCustom04" required>
+        <option selected disabled value="">Location</option>
+        <option>Niyawa</option>
+          <option>Char Khamba</option>
+          <option>Kargi Chowk</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-1 container2_button ">
+        
+      <select class="form-select " id="validationCustom04" required>
+        <option selected disabled value="">Time</option>
+        <option>Niyawa</option>
+          <option>Char Khamba</option>
+          <option>Kargi Chowk</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+     <!-- <div class="dropdown-center">
+        
+        <select class="btn btn-outline-warning dropdown-toggle container2_button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Time
+        
+        <ul class="dropdown-menu">
+        -->
+       <!--   <li><option>Time</option></li>
+          <li><option>Evening</option></li>
+          <li><option>After Noon</option></li>
+          
+        </ul>
+      </select>
+      </div>
+      
+     -->
+        
+        <button class="btn btn-outline-warning container3_button" type="submit">Submit form
+
+        </button>
+
+      </form>  
+        <span class="text_main">
+          <h2>For You FruitFull Contribution. <a href="/infromation_inserting/" class="Text">Click Here...</a></h2>
+    </span>
+      </div>
+    </div>
+</body>
+</html>

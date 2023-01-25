@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ashish kumar kohli</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <h2>Login</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="inputbox">
+                    <input type="text" required="required" id="Id" name="Id">
+                    <span>
+                        Enter You ID:*
+                    </span>
+                </div>
+            
+                <div class="inputbox">
+                    <input type="password" required="required" id="password" name="password">
+                    <span>
+                        Password: *
+                    </span>
+                </div>
+
+               <!--<a href="/signup/"></a>-->
+               <i> <a href="{% url 'signup_student:signup' %}">Wanted to Signup?</a></p> </i><br><br>
+                <div class="inputbox">
+                    <input type="submit" value="Login">
+                </div>
+                
+            </form>
+        </div>
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
