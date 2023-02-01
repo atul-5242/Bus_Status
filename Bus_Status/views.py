@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 # import requests
 from requests.auth import HTTPBasicAuth
 import os
-os.path.join("D:/Project_Learning/Bus_Status/signup_student")
+# os.path.join("D:/Project_Learning/Bus_Status/signup_student")
 # from signup_student.models import StudentDetails
 # from django.contrib.auth import authenticate, login, logout
 # from django.shortcuts import render, redirect
@@ -51,14 +51,14 @@ def signup(request):
         ID=request.POST.get("Id")
         Password1=request.POST.get("password1")
         Password2=request.POST.get("password2")
-        name=request.POST.get("fullname")
+        # name=request.POST.get("fullname")
         email=request.POST.get("email")
         # print(email)
         # print(ID)
-        # # print(Password)
+        # print(Password)
         # print(name)
-        # # print(email)
-        data=StudentDetails(student_pass=Password1,student_pass2=Password2,student_name=name,student_id=ID,student_email=email)
+        # print(email)
+        data=StudentDetails(email=email,Id=ID,password1=Password1,password2=Password2)
         data.save() 
     return render(request,"signup.html")
 # def infromation_inserting(request):
